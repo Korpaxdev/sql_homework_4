@@ -89,7 +89,7 @@ WHERE (
 		SELECT MIN(tmp1.count)
 		FROM tmp1
 	) = tmp1.count;
-	
+
 	-- variant throught 'with'
 WITH tmp1 AS (
 	SELECT a.album_id,
