@@ -73,7 +73,7 @@ WHERE (
 	) = t.track_duration;
 
 -- 9.the albums containing the least number of tracks
--- variant throught temporary table
+	-- variant throught temporary table
 CREATE TEMPORARY TABLE tmp1 ON COMMIT DROP AS (
 	SELECT a.album_id,
 		a.album_name,
@@ -90,7 +90,7 @@ WHERE (
 		FROM tmp1
 	) = tmp1.count;
 	
--- variant throught 'with'
+	-- variant throught 'with'
 WITH tmp1 AS (
 	SELECT a.album_id,
 		a.album_name,
